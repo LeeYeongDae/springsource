@@ -1,0 +1,15 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+*.class
+
+*.log
+
+*/./gitignore
+*/.gitattributes
+*./mvtw
+*./mvtw.cmd
+*./.mvn/wrapper/maven-wrapper.properties
