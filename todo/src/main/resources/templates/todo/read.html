@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layouts/layout}">
+  <th:block lay:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/list-groups.css}"/>
+  </th:block>
+  <div layout:fragment="content">
+    <form>
+      <div class="row mb-3">
+        <label for="Content" class="col-sm-2 col-form-label">Content</label>
+        <div class="col-sm-10">
+          <textarea name="content" id="content" rows="10" class="form-control" cols="50" readonly>[[${todo.content}]]</textarea>
+        </div>
+      </div>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="completed" id="completed" th:value="${todo.completed}" />
+            <label class="form-check-label" for="completed">
+              Completed
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Importanted" id="Importanted" th:value="${todo.importanted}"/>
+            <label class="form-check-label" for="importanted">
+              Importanted
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <a class="btn btn-primary" th:href="@{/todo/list}">목록</a>
+      <a class="btn btn-danger" th:href="@{/todo/remove(id=${todo.id})}">삭제</a>
+    </form>
+  </div>
+  <th:block layout:fragment="script">
+  </th:block>
+</html>

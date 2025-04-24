@@ -1,0 +1,18 @@
+도서관리
+도서정보 입력
+도서정보 수정
+도서정보 삭제
+도서정보 조회
+     -전체 조회
+     -개별 조회
+
+Book
+Id(BookCode) PK Long
+책 이름(Title) String
+저자명(author) String
+가격(price) Int
+
+//
+출판사명
+출판일
+도서 설명
